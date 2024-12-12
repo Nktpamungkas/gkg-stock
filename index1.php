@@ -77,7 +77,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <!-- daterange picker -->
   <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
-
+  <!-- X Editable -->
+  <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
@@ -448,6 +449,8 @@ desired effect
   <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
   <script>
     //Date picker
     $('#datepicker').datepicker({
@@ -628,6 +631,16 @@ desired effect
         }
       });
     });
+
+    $(document).ready(function () {
+    $('.ubah_lokasi').editable({
+        type: 'text',
+        disabled: false,
+        url: 'views/pages/editable/editable_posisi.php',
+      });
+    });
+
+
     $(document).on('click', '.user_edit', function(e) {
       var m = $(this).attr("id");
       $.ajax({
