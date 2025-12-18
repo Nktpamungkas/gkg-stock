@@ -484,6 +484,13 @@ desired effect
       $('#example1').DataTable({})
       $('#example2').DataTable()
       $('#example3').DataTable({})
+	  $("#example4").DataTable({
+        'paging': true,
+		dom: 'Bfrtip',
+        buttons: [
+          'excel',
+        ]  
+      })	
 	  $('.example_allpage').DataTable({
     "pageLength": -1
 })

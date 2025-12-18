@@ -33,7 +33,7 @@ $cek= $barang->jmlStock($idsub);
   <?php if($cek>0){?><a href="cetak/lapbarang/<?php echo $_SESSION['subQC']; ?>/" class="btn btn-danger pull-right" target="_blank">Cetak</a><?php } ?>
 </div>
 <div class="box-body">
-<table width="100%" id="example1" class="table table-bordered table-hover">
+<table width="100%" id="example4" class="table table-bordered table-hover">
  <thead class="btn-success">
   <tr>
     <th width="2%">No</th>

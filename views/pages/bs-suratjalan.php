@@ -120,6 +120,12 @@ $bs_suratjalan_array = $model->bs_suratjalan_array('out');
 				  
 				<div class="col-md-3">
 					<input type="text" class="form-control" name="preview_lokasi_bs" id="preview_lokasi_bs" min="7" max="7" maxlength="7" required>
+                    <!-- <select class="form-control select2" name="preview_lokasi_bs" style="width: 100%;">
+                      <option value=""> </option>
+                      <?php foreach($model->lokasi_list() as $data) {  ?>
+                      <option value="<?=$data?>" > <?=$data?> </option>
+                      <?php } ?>
+                    </select> -->
                   <span class="help-block with-errors"></span>
                   </div>	
 				  </div>
@@ -141,9 +147,9 @@ $bs_suratjalan_array = $model->bs_suratjalan_array('out');
 
 <script>
 	function toSubmit(){
+    //   alert('I will not submit');
 
 	let lokasibs = document.getElementById('preview_lokasi_bs').value
-
 	if(lokasibs.length > 7) {
 		alert('karakter lokasi lebih dari 7');
 	} else if(lokasibs.length < 7) {
